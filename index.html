@@ -9,15 +9,136 @@
   </head>
   <body>
     <header class="header">
-      <h1>Hello boss</h1>
+      <div class="container">
+        <img
+          src="assets/svgs/logo.svg"
+          alt="barbershop logo"
+          class="header__logo"
+        />
+      </div>
+
+      <nav class="navigation header__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#price" class="navigation__link">стоимость услуг</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#price" class="navigation__link">О нас</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#reserve" class="navigation__link">Записаться</a>
     </header>
     <main>
-      <section class="hero"></section>
-      <section class="price"></section>
-      <section class="about"></section>
-      <section class="reserve"></section>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">
+            <span class="sr-only">Barbershop chick-chick</span>
+            <span>Мы создаём искусство, которое не стыдно показать</span>
+          </h1>
+
+          <div class="hero__slider slider">
+            <div class="slider__container">
+              <ul class="slider__list">
+                <!-- img01 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img01.jpg"
+                    alt="stylish hairstyle 01"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img02 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img02.jpg"
+                    alt="stylish hairstyle 02"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img03 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img03.jpg"
+                    alt="stylish hairstyle 03"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img04 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img04.jpg"
+                    alt="stylish hairstyle 04"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img05 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img05.jpg"
+                    alt="stylish hairstyle 05"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img06 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img06.jpg"
+                    alt="stylish hairstyle 06"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img07 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img07.jpg"
+                    alt="stylish hairstyle 07"
+                    class="slider__img"
+                  />
+                </li>
+
+                <!-- img08 -->
+                <li class="slider__item">
+                  <img
+                    src="assets/images/img08.jpg"
+                    alt="stylish hairstyle 08"
+                    class="slider__img"
+                  />
+                </li>
+              </ul>
+
+              <button
+                class="slider__arrow slider__arrow--left"
+                aria-label="предыдущий слайд
+                "
+              ></button>
+              <button
+                class="slider__arrow slider__arrow--right"
+                aria-label="следующий слайд"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="price" id="price">
+        <div class="container"></div>
+      </section>
+      <section class="about" id="about">
+        <div class="container"></div>
+      </section>
+      <section class="reserve" id="reserve">
+        <div class="container"></div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
 
     <script src="app.js"></script>
   </body>
