@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+    <link rel="stylesheet" href="assets/css/main-link.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+
     <title>Chick-chick &mdash; Barbershop</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <img
-          src="assets/svgs/logo.svg"
-          alt="barbershop logo"
-          class="logo header__logo"
-        />
+        <div class="header__container">
+          <img
+            src="assets/svgs/logo.svg"
+            alt="barbershop logo"
+            class="logo header__logo"
+          />
+          <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#price" class="navigation__link">стоимость услуг</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#about" class="navigation__link">О нас</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#reserve" class="main-link navigation__link">Записаться</a>
+        </div>
       </div>
-
-      <nav class="navigation header__navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#price" class="navigation__link">стоимость услуг</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#about" class="navigation__link">О нас</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#reserve" class="btn-link navigation__link">Записаться</a>
     </header>
     <main>
       <section class="hero">
@@ -178,7 +185,7 @@
                 </li>
               </ul>
 
-              <a href="#reserve" class="btn-link price__link">Записаться</a>
+              <a href="#reserve" class="main-link price__link">Записаться</a>
             </div>
           </div>
         </div>
@@ -516,7 +523,7 @@
                 </fieldset>
               </fieldset>
             </div>
-            <button class="btn-link reserve__btn"></button>
+            <button class="main-link reserve__btn" disabled>Записаться</button>
           </form>
         </div>
       </section>
