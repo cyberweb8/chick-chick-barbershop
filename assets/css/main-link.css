@@ -5,6 +5,7 @@
   padding: 13px 46px;
   background-color: #f6f3e3;
   color: #241d1c;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s;
 }
