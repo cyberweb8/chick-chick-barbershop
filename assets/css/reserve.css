@@ -1,0 +1,136 @@
+.reserve {
+  padding: 62px 0 124px;
+}
+.reserve__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+.reserve__list {
+  margin: 0 0 72px;
+  padding-left: 24px;
+}
+.reserve__item {
+  line-height: 1.5;
+  color: #bfbdb2;
+  margin-bottom: 8px;
+}
+.reserve__item:last-child {
+  margin-bottom: 0;
+}
+.reserve__form-container {
+  margin-bottom: 40px;
+}
+.reserve__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0 0 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reserve__fieldset:last-child {
+  margin-bottom: 0;
+}
+.reserve__legend {
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  /* flex-basis: 100%; */
+}
+.radio__input {
+  position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.radio__label {
+  display: inline-block;
+  padding: 16px 24px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid #bfbdb2;
+  border-radius: 36px;
+}
+
+.radio__label:hover {
+  color: #efe7be;
+}
+
+.radio__input:focus + .radio__label,
+.radio__input:checked + .radio__label {
+  background-color: #f6f3e3;
+  color: #241d1c;
+}
+.radio__label-spec {
+  padding-left: 52px;
+  background-image: var(--bg-image);
+  background-size: 36px;
+  background-repeat: no-repeat;
+  background-position: 8px;
+}
+.reserve__fieldset-sub {
+  flex-basis: 100%;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .reserve__list {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .reserve__title {
+    font-size: 32px;
+  }
+  .reserve__list {
+    margin-bottom: 40px;
+  }
+
+  .reserve__form-container {
+    margin-bottom: 32px;
+  }
+  .reserve__fieldset {
+    margin-bottom: 40px;
+  }
+  .reserve__legend {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .radio__label {
+    font-size: 12px;
+  }
+  .radio__label-spec {
+    background-size: 24px;
+    padding-left: 40px;
+  }
+  .reserve__fieldset-sub {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .reserve__title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .reserve__list {
+    margin-bottom: 32px;
+  }
+  .reserve__item {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .reserve__form-container {
+    margin-bottom: 24px;
+  }
+  .reserve__fieldset {
+    margin-bottom: 32px;
+  }
+}
