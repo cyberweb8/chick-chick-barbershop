@@ -16,12 +16,25 @@ const startSlider = () => {
   let activeSlide = 1;
   let position = 0;
 
+  const checkSlider = () => {
+    activeSlide + 2 === sliderItems.length
+      ? (btnNextSlider.style.display = 'none')
+      : (btnNextSlider.style.display = '');
+
+    activeSlide === 1
+      ? (btnPrevSlider.style.display = 'none')
+      : (btnPrevSlider.style.display = '');
+  };
+
+  checkSlider();
+
   const nextSlider = () => {
     sliderItems[activeSlide].classList.remove('slider__item_active');
     let position = -sliderItems[0].clientWidth * activeSlide;
     sliderList.style.transform = `translate(${position}px)`;
     activeSlide++;
     sliderItems[activeSlide].classList.add('slider__item_active');
+    checkSlider();
   };
 
   const prevSlider = () => {
@@ -30,6 +43,7 @@ const startSlider = () => {
     sliderList.style.transform = `translate(${position}px)`;
     activeSlide--;
     sliderItems[activeSlide].classList.add('slider__item_active');
+    checkSlider();
   };
 
   btnPrevSlider.addEventListener('click', prevSlider);
