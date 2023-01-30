@@ -17,7 +17,9 @@ const startSlider = () => {
   let position = 0;
 
   const checkSlider = () => {
-    activeSlide + 2 === sliderItems.length
+    (activeSlide + 2 === sliderItems.length &&
+      document.documentElement.offsetWidth > 560) ||
+    activeSlide === sliderItems.length
       ? (btnNextSlider.style.display = 'none')
       : (btnNextSlider.style.display = '');
 
@@ -29,25 +31,39 @@ const startSlider = () => {
   checkSlider();
 
   const nextSlider = () => {
-    sliderItems[activeSlide].classList.remove('slider__item_active');
+    sliderItems[activeSlide]?.classList.remove('slider__item_active');
     let position = -sliderItems[0].clientWidth * activeSlide;
     sliderList.style.transform = `translate(${position}px)`;
     activeSlide++;
-    sliderItems[activeSlide].classList.add('slider__item_active');
+    sliderItems[activeSlide]?.classList.add('slider__item_active');
     checkSlider();
   };
 
   const prevSlider = () => {
-    sliderItems[activeSlide].classList.remove('slider__item_active');
+    sliderItems[activeSlide]?.classList.remove('slider__item_active');
     let position = -sliderItems[0].clientWidth * (activeSlide - 2);
     sliderList.style.transform = `translate(${position}px)`;
     activeSlide--;
-    sliderItems[activeSlide].classList.add('slider__item_active');
+    sliderItems[activeSlide]?.classList.add('slider__item_active');
     checkSlider();
   };
 
   btnPrevSlider.addEventListener('click', prevSlider);
   btnNextSlider.addEventListener('click', nextSlider);
+
+  window.addEventListener('resize', () => {
+    if (
+      activeSlide + 2 > sliderItems.length &&
+      document.documentElement.offsetWidth > 560
+    ) {
+      activeSlide = sliderItems.length - 2;
+      sliderItems[activeSlide]?.classList.add('slider__item_active');
+    }
+
+    position = -sliderItems[0].clientWidth * (activeSlide - 1);
+    sliderList.style.transform = `translate(${position}px)`;
+    checkSlider();
+  });
 };
 const initSlider = () => {
   const slider = document.querySelector('.slider');
